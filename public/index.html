@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ตัวแปลงไฟล์ออนไลน์</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <h1>แปลงไฟล์ได้ทุกรูปแบบ</h1>
+      <p>เอกสาร &middot; สเปรดชีต &middot; งานนำเสนอ &middot; รูปภาพ &middot; เสียง &middot; วิดีโอ</p>
+    </header>
+
+    <main class="card">
+      <div id="dropzone" class="dropzone">
+        <input type="file" id="fileInput" hidden />
+        <div class="dropzone-content" id="dropzoneIdle">
+          <div class="upload-icon">⬆</div>
+          <p class="dz-title">ลากไฟล์มาวางที่นี่ หรือคลิกเพื่อเลือกไฟล์</p>
+          <p class="dz-sub">รองรับ PDF, Word, Excel, PowerPoint, รูปภาพ, เสียง และวิดีโอ</p>
+        </div>
+        <div class="dropzone-content" id="dropzoneFile" hidden>
+          <div class="file-icon">📄</div>
+          <p class="dz-filename" id="fileName"></p>
+          <p class="dz-sub" id="fileMeta"></p>
+          <button type="button" class="link-btn" id="changeFileBtn">เลือกไฟล์อื่น</button>
+        </div>
+      </div>
+
+      <div class="controls" id="controls" hidden>
+        <label for="targetFormat">แปลงเป็น</label>
+        <select id="targetFormat"></select>
+        <button type="button" id="convertBtn" class="primary-btn">แปลงไฟล์</button>
+      </div>
+
+      <div id="status" class="status" hidden></div>
+    </main>
+
+    <footer class="footer">
+      <p>ไฟล์ของคุณจะถูกลบออกจากเซิร์ฟเวอร์ทันทีหลังการแปลงเสร็จสิ้น</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
